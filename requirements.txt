@@ -1,0 +1,53 @@
+# ═══════════════════════════════════════════════════════════
+#  Veloura Rugs — Project Requirements
+# ═══════════════════════════════════════════════════════════
+
+# ─── Runtime ─────────────────────────────────────────────
+Node.js          >= 18.x
+npm              >= 9.x
+
+# ─── Dev Dependencies (installed via npm install) ────────
+vite             ^6.0.0
+
+# ─── Setup Instructions ─────────────────────────────────
+# 1. Clone the repository
+#      git clone https://github.com/<your-username>/veloura-rugs.git
+#
+# 2. Navigate into the project
+#      cd veloura-rugs
+#
+# 3. Install dependencies
+#      npm install
+#
+# 4. Start the development server
+#      npm run dev
+#
+# 5. Build for production
+#      npm run build
+#
+# 6. Preview the production build
+#      npm run preview
+
+# ─── Project Structure ──────────────────────────────────
+# veloura-rugs/
+# ├── index.html              # Main HTML entry point
+# ├── package.json             # Project metadata & scripts
+# ├── vite.config.js           # Vite configuration
+# ├── data/
+# │   └── products.json        # Product catalog data
+# ├── public/
+# │   └── images/              # Static assets (logo, favicons)
+# └── src/
+#     ├── main.js              # App initialization & routing
+#     ├── router.js            # SPA hash-based router
+#     ├── store.js             # Cart, wishlist & state management
+#     ├── pages/               # Page renderers (home, collections, etc.)
+#     └── styles/
+#         └── index.css        # Global stylesheet
+
+# ─── Tech Stack ─────────────────────────────────────────
+# • Vanilla HTML, CSS, JavaScript (no frameworks)
+# • Vite for dev server & bundling
+# • SPA with hash-based routing
+# • Google Fonts (Cormorant Garamond, Jost)
+# • Font Awesome 6.4 (CDN)
