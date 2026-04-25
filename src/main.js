@@ -22,7 +22,7 @@ import { renderCheckout } from './pages/checkout.js';
 // Load product data
 async function loadData() {
   try {
-    const res = await fetch('/data/products.json');
+    const res = await fetch(`${import.meta.env.BASE_URL}data/products.json`);
     const data = await res.json();
     
     // Duplicate products for testing (up to 100)
