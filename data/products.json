@@ -1,0 +1,772 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "slug": "10x14-camel-brown-southwestern-afghan-hand-knotted-rug",
+      "title": "10x14 ft Camel Brown Southwestern Afghan Hand Knotted Rug",
+      "sku": "10847 - 62874 A",
+      "price": 3995.99,
+      "comparePrice": 9990.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15342.jpg",
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15343.jpg"
+      ],
+      "description": {
+        "design": "Southwestern",
+        "size": "9'8\"x14'1\" - 294x430 cm",
+        "density": "110 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Contemporary and Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "traditional", "10x14-10x13"],
+      "style": "Traditional",
+      "size": "10x14 - 10x13",
+      "color": "Brown",
+      "inStock": true,
+      "badge": "Sale",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "slug": "10x13-landscape-gabbeh-rusty-red-orange-tribal-afghan-rug",
+      "title": "10'x13'4\" Landscape Gabbeh Rusty Red Orange Tribal Afghan Rug",
+      "sku": "10920 - 63021 A",
+      "price": 3195.99,
+      "comparePrice": 7990.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/118114.jpg"
+      ],
+      "description": {
+        "design": "Tribal Gabbeh",
+        "size": "10'x13'4\" - 305x406 cm",
+        "density": "90 KPSI",
+        "woolPile": "10 mm - 14 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Contemporary and Modern",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "tribal", "10x14-10x13"],
+      "style": "Tribal",
+      "size": "10x14 - 10x13",
+      "color": "Red",
+      "inStock": true,
+      "badge": "Sale",
+      "featured": true
+    },
+    {
+      "id": "3",
+      "slug": "3x5-green-mamluk-hand-knotted-turkish-runner-rug",
+      "title": "3x5 Ft Green Mamluk Hand Knotted Turkish Runner Rug",
+      "sku": "11517 - 121488 A",
+      "price": 1099.99,
+      "comparePrice": 2750.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/il_fullxfull.6368037360_oclm.jpg"
+      ],
+      "description": {
+        "design": "Mamluk",
+        "size": "3'2\"x5'1\" - 97x155 cm",
+        "density": "120 KPSI",
+        "woolPile": "8 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Traditional and Transitional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "mamluk", "3x5"],
+      "style": "Mamluk",
+      "size": "3x5",
+      "color": "Green",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "4",
+      "slug": "10x14-red-bidjar-afghan-hand-knotted-oriental-rug",
+      "title": "10x14 Red Bidjar Afghan Hand Knotted Oriental Rug",
+      "sku": "11919 - 14451 A",
+      "price": 3499.99,
+      "comparePrice": 8750.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/14453.jpg"
+      ],
+      "description": {
+        "design": "Bidjar Oriental",
+        "size": "10'1\"x14'2\" - 307x431 cm",
+        "density": "130 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "traditional", "10x14-10x13"],
+      "style": "Traditional",
+      "size": "10x14 - 10x13",
+      "color": "Red",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "5",
+      "slug": "4x6-beige-waziri-afghan-hand-knotted-square-rug",
+      "title": "4x6 Beige Waziri Afghan Hand Knotted Square Rug",
+      "sku": "11924 - 121427 A",
+      "price": 599.99,
+      "comparePrice": 1500.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/121627.jpg"
+      ],
+      "description": {
+        "design": "Waziri",
+        "size": "4'1\"x5'10\" - 124x178 cm",
+        "density": "100 KPSI",
+        "woolPile": "8 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Traditional and Contemporary",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "transitional", "4x6"],
+      "style": "Transitional",
+      "size": "4x6",
+      "color": "Beige",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "6",
+      "slug": "8x10-green-oushak-afghan-hand-knotted-oriental-rug",
+      "title": "8x10 Green Oushak Afghan Hand Knotted Oriental Rug",
+      "sku": "11688 - 11952 A",
+      "price": 1799.99,
+      "comparePrice": 4500.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/119692.jpg"
+      ],
+      "description": {
+        "design": "Oushak",
+        "size": "8'2\"x10'1\" - 249x307 cm",
+        "density": "110 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Contemporary and Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "turkish-oushak", "8x10-8x11"],
+      "style": "Turkish Oushak",
+      "size": "8x10 - 8x11",
+      "color": "Green",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "7",
+      "slug": "8ft-blue-mamluk-hand-knotted-wool-afghan-medallion-runner-rug",
+      "title": "8 Ft Blue Mamluk Hand Knotted Wool Afghan Medallion Runner Rug",
+      "sku": "9780 - 117723 A",
+      "price": 999.99,
+      "comparePrice": 2500.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/DSC01640_70405c77-7f0f-46ff-ba38-61e4f029f23d.jpg"
+      ],
+      "description": {
+        "design": "Mamluk Medallion",
+        "size": "2'7\"x8'2\" - 79x249 cm",
+        "density": "120 KPSI",
+        "woolPile": "8 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton",
+        "condition": "New",
+        "preferInterior": "Traditional and Transitional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "mamluk", "runners"],
+      "style": "Mamluk",
+      "size": "Runner",
+      "color": "Blue",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "8",
+      "slug": "6x7-navy-blue-baluch-traditional-afghan-hand-knotted-rug",
+      "title": "6x7 Navy Blue Baluch Traditional Afghan Hand Knotted Wool & Wool Rug",
+      "sku": "6892 - 115661 A",
+      "price": 1199.99,
+      "comparePrice": 3000.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/DSC01640_70405c77-7f0f-46ff-ba38-61e4f029f23d.jpg"
+      ],
+      "description": {
+        "design": "Baluch Traditional",
+        "size": "6'2\"x7'1\" - 188x216 cm",
+        "density": "100 KPSI",
+        "woolPile": "8 mm",
+        "material": "Afghan Wool, Wool Foundation",
+        "condition": "New",
+        "preferInterior": "Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "traditional", "6x8-5x8"],
+      "style": "Traditional",
+      "size": "6x8 - 5x8",
+      "color": "Blue",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "9",
+      "slug": "5x7-navy-blue-baluch-afghan-hand-knotted-tribal-rug",
+      "title": "5x7 Navy Blue Baluch Afghan Hand Knotted Tribal Rug",
+      "sku": "5974 - 106791 A",
+      "price": 799.99,
+      "comparePrice": 1999.00,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/yildiz-rugs-default-title-5x7-navy-blue-baluch-afghan-hand-knotted-tribal-rug-36044857049241.jpg"
+      ],
+      "description": {
+        "design": "Tribal Baluch",
+        "size": "5'1\"x6'10\" - 155x208 cm",
+        "density": "90 KPSI",
+        "woolPile": "8 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton",
+        "condition": "New",
+        "preferInterior": "Contemporary and Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "tribal", "5x7"],
+      "style": "Tribal",
+      "size": "5x7",
+      "color": "Blue",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "10",
+      "slug": "2x3-green-afghan-waziri-floral-hand-knotted-rug",
+      "title": "2x3 Green Afghan Waziri Floral Hand Knotted Rug",
+      "sku": "13731 - 15779 A",
+      "price": 279.00,
+      "comparePrice": 697.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15779.jpg"
+      ],
+      "description": {
+        "design": "Waziri Floral",
+        "size": "2'1\"x3'2\" - 64x97 cm",
+        "density": "100 KPSI",
+        "woolPile": "8 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton",
+        "condition": "New",
+        "preferInterior": "Traditional and Contemporary",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "transitional", "1x2-3x4"],
+      "style": "Transitional",
+      "size": "1x2 - 3x4 ft",
+      "color": "Green",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "11",
+      "slug": "9x12-orange-mamluk-handknotted-wool-medallion-area-rug",
+      "title": "9x12 Orange Mamluk HandKnotted Wool Medallion Area Rug",
+      "sku": "13543 - 11665 A",
+      "price": 5590.00,
+      "comparePrice": 13487.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15665.jpg"
+      ],
+      "description": {
+        "design": "Mamluk Medallion",
+        "size": "9'1\"x12'2\" - 277x371 cm",
+        "density": "120 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Traditional and Transitional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "mamluk", "9x12"],
+      "style": "Mamluk",
+      "size": "9x12",
+      "color": "Multicolor",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "12",
+      "slug": "3x3-vintage-red-beige-afghan-hand-knotted-square-rug",
+      "title": "3x3 Vintage Red Beige Afghan Hand Knotted Square Rug",
+      "sku": "13229 - 15191 A",
+      "price": 399.00,
+      "comparePrice": 997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15785.jpg"
+      ],
+      "description": {
+        "design": "Vintage",
+        "size": "3'1\"x3'3\" - 94x99 cm",
+        "density": "80 KPSI",
+        "woolPile": "6 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton",
+        "condition": "Vintage",
+        "preferInterior": "Contemporary and Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "vintage", "square-circle"],
+      "style": "Vintage",
+      "size": "Square & Circle",
+      "color": "Red",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "13",
+      "slug": "4x6-red-mamluk-hand-knotted-medallion-rug",
+      "title": "4x6 Red Mamluk Hand Knotted Medallion Rug",
+      "sku": "12917 - 10127 A",
+      "price": 599.00,
+      "comparePrice": 1497.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/50273.jpg"
+      ],
+      "description": {
+        "design": "Mamluk Medallion",
+        "size": "4'2\"x6'1\" - 127x185 cm",
+        "density": "120 KPSI",
+        "woolPile": "8 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "mamluk", "4x6"],
+      "style": "Mamluk",
+      "size": "4x6",
+      "color": "Red",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "14",
+      "slug": "2x5-red-shaul-turkish-hand-knotted-runner-rug",
+      "title": "2x5 Red Shaul Turkish Hand Knotted Runner Rug",
+      "sku": "13752 - 22919 A",
+      "price": 249.00,
+      "comparePrice": 622.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/il_fullxfull.7974663151_7dgw.jpg"
+      ],
+      "description": {
+        "design": "Shaul",
+        "size": "2'1\"x5'2\" - 64x158 cm",
+        "density": "100 KPSI",
+        "woolPile": "8 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton",
+        "condition": "New",
+        "preferInterior": "Traditional and Transitional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "traditional", "runners"],
+      "style": "Traditional",
+      "size": "Runner",
+      "color": "Red",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "15",
+      "slug": "8x10-serapi-red-hand-knotted-afghan-oriental-rug",
+      "title": "8x10 Serapi Red Hand Knotted Afghan Oriental Rug",
+      "sku": "13754 - 15483 A",
+      "price": 1990.00,
+      "comparePrice": 4997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15483.jpg"
+      ],
+      "description": {
+        "design": "Serapi Oriental",
+        "size": "8'2\"x10'3\" - 249x312 cm",
+        "density": "110 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "traditional", "8x10-8x11"],
+      "style": "Traditional",
+      "size": "8x10 - 8x11",
+      "color": "Red",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "16",
+      "slug": "10x14-blue-oushak-hand-knotted-oriental-rug",
+      "title": "10x14 Blue Oushak Hand-Knotted Oriental Rug",
+      "sku": "13755 - 15416 A",
+      "price": 3199.00,
+      "comparePrice": 7997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15410.jpg"
+      ],
+      "description": {
+        "design": "Oushak",
+        "size": "10'1\"x14'2\" - 307x432 cm",
+        "density": "110 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Contemporary and Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "turkish-oushak", "10x14-10x13"],
+      "style": "Turkish Oushak",
+      "size": "10x14 - 10x13",
+      "color": "Blue",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "17",
+      "slug": "9x12-beige-oushak-turkish-hand-knotted-oriental-rug",
+      "title": "9x12 Beige Oushak Turkish Hand Knotted Oriental Rug",
+      "sku": "13756 - 15364 A",
+      "price": 2399.00,
+      "comparePrice": 5997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15364.jpg"
+      ],
+      "description": {
+        "design": "Oushak",
+        "size": "9'2\"x12'1\" - 279x368 cm",
+        "density": "110 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Contemporary and Transitional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "turkish-oushak", "9x12"],
+      "style": "Turkish Oushak",
+      "size": "9x12",
+      "color": "Beige",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "18",
+      "slug": "9x12-blue-oushak-hand-knotted-turkish-rug",
+      "title": "9x12 Blue Oushak Hand-Knotted Turkish Rug",
+      "sku": "13758 - 15497 A",
+      "price": 2399.00,
+      "comparePrice": 5997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15407.jpg"
+      ],
+      "description": {
+        "design": "Oushak",
+        "size": "9'1\"x12'2\" - 277x371 cm",
+        "density": "110 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Contemporary and Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "turkish-oushak", "9x12"],
+      "style": "Turkish Oushak",
+      "size": "9x12",
+      "color": "Blue",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "19",
+      "slug": "8x10-oushak-blueish-grey-hand-knotted-turkish-rug",
+      "title": "8x10 Oushak Blueish Grey Hand Knotted Turkish Rug",
+      "sku": "13739 - 15517 A",
+      "price": 1799.00,
+      "comparePrice": 4497.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15377.jpg"
+      ],
+      "description": {
+        "design": "Oushak",
+        "size": "8'1\"x10'2\" - 246x310 cm",
+        "density": "110 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Contemporary and Modern",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "turkish-oushak", "8x10-8x11"],
+      "style": "Turkish Oushak",
+      "size": "8x10 - 8x11",
+      "color": "Grey",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "20",
+      "slug": "8x10-red-bidjar-afghan-hand-knotted-oriental-rug",
+      "title": "8x10 Red Bidjar Afghan Hand Knotted Oriental Rug",
+      "sku": "13768 - 118114 A",
+      "price": 3199.00,
+      "comparePrice": 7997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/118114.jpg"
+      ],
+      "description": {
+        "design": "Bidjar Oriental",
+        "size": "8'2\"x10'1\" - 249x307 cm",
+        "density": "130 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Traditional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "traditional", "8x10-8x11"],
+      "style": "Traditional",
+      "size": "8x10 - 8x11",
+      "color": "Red",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "21",
+      "slug": "anti-slip-dual-surface-rug-pads",
+      "title": ".25\" Anti Slip Dual Surface Rug Pads",
+      "sku": "RP-001",
+      "price": 29.00,
+      "comparePrice": 525.00,
+      "images": [
+        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800"
+      ],
+      "description": {
+        "design": "Rug Pad",
+        "size": "Various Sizes Available",
+        "material": "Dual Surface - Felt & Rubber",
+        "condition": "New",
+        "origin": "USA"
+      },
+      "collections": ["rug-pads"],
+      "style": "Rug Pads",
+      "size": "Various",
+      "color": "Grey",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "22",
+      "slug": "6x9-beige-vintage-tabriz-afghan-hand-knotted-rug",
+      "title": "6x9 Beige Vintage Tabriz Afghan Hand Knotted Rug",
+      "sku": "3010 - 5578 / 2578 A",
+      "price": 1199.00,
+      "comparePrice": 2997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15342.jpg"
+      ],
+      "description": {
+        "design": "Tabriz Vintage",
+        "size": "6'2\"x9'1\" - 188x277 cm",
+        "density": "100 KPSI",
+        "woolPile": "6 mm - 8 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton",
+        "condition": "Vintage",
+        "preferInterior": "Traditional and Contemporary",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "vintage", "clearance", "6x9"],
+      "style": "Vintage",
+      "size": "6x9",
+      "color": "Beige",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "23",
+      "slug": "10x14-beige-khotan-afghan-hand-knotted-rug",
+      "title": "10x14 Beige Khotan Afghan Hand-Knotted Rug",
+      "sku": "841 - 25097 A",
+      "price": 2799.00,
+      "comparePrice": 6997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15373.jpg"
+      ],
+      "description": {
+        "design": "Khotan",
+        "size": "10'1\"x14'2\" - 307x432 cm",
+        "density": "110 KPSI",
+        "woolPile": "8 mm - 10 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Contemporary and Transitional",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "transitional", "clearance", "10x14-10x13"],
+      "style": "Transitional",
+      "size": "10x14 - 10x13",
+      "color": "Beige",
+      "inStock": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "24",
+      "slug": "8x10-tree-gabbeh-golden-yellow-hand-knotted-afghan-rug",
+      "title": "8x10 Tree Gabbeh Golden Yellow Hand-Knotted Afghan Rug",
+      "sku": "13738 - 5543 A",
+      "price": 1999.00,
+      "comparePrice": 4997.50,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0462/6808/8473/files/15484.jpg"
+      ],
+      "description": {
+        "design": "Gabbeh Tree of Life",
+        "size": "8'1\"x10'2\" - 246x310 cm",
+        "density": "80 KPSI",
+        "woolPile": "10 mm - 14 mm",
+        "material": "Afghan Ghazni Wool, Foundation Cotton & Natural Veg Dyes",
+        "condition": "New",
+        "preferInterior": "Modern and Contemporary",
+        "origin": "Afghanistan"
+      },
+      "collections": ["all-rugs", "modern", "8x10-8x11"],
+      "style": "Modern",
+      "size": "8x10 - 8x11",
+      "color": "Gold",
+      "inStock": true,
+      "badge": "Sale"
+    }
+  ],
+  "collections": [
+    {
+      "slug": "all-rugs",
+      "name": "All Rugs Collection",
+      "type": "main"
+    },
+    {
+      "slug": "turkish-oushak",
+      "name": "Turkish Oushak",
+      "type": "style",
+      "image": "https://cdn.shopify.com/s/files/1/0462/6808/8473/collections/104148.jpg"
+    },
+    {
+      "slug": "mamluk",
+      "name": "Mamluk",
+      "type": "style",
+      "image": "https://cdn.shopify.com/s/files/1/0462/6808/8473/collections/108434.jpg"
+    },
+    {
+      "slug": "runners",
+      "name": "Runners",
+      "type": "size",
+      "image": "https://cdn.shopify.com/s/files/1/0462/6808/8473/collections/85744.jpg"
+    },
+    {
+      "slug": "traditional",
+      "name": "Traditional",
+      "type": "style",
+      "image": "https://cdn.shopify.com/s/files/1/0462/6808/8473/collections/iap_640x640.2517555161_8pv8ttsm.jpg"
+    },
+    {"slug": "transitional", "name": "Transitional", "type": "style"},
+    {"slug": "tribal", "name": "Tribal", "type": "style"},
+    {"slug": "vintage", "name": "Vintage", "type": "style"},
+    {"slug": "modern", "name": "Modern", "type": "style"},
+    {"slug": "flat-weave-kilims", "name": "Flat Weave Kilims", "type": "style"},
+    {"slug": "moroccan", "name": "Moroccan", "type": "style"},
+    {"slug": "square-circle", "name": "Square & Circle", "type": "size"},
+    {"slug": "gallery-size-rugs", "name": "Gallery Size Rugs", "type": "size"},
+    {"slug": "12x15-12x18", "name": "12x15 ft - 12x18 ft", "type": "size"},
+    {"slug": "10x14-10x13", "name": "10x14 ft - 10x13 ft", "type": "size"},
+    {"slug": "9x12", "name": "9x12 ft", "type": "size"},
+    {"slug": "8x10-8x11", "name": "8x10 ft - 8x11 ft", "type": "size"},
+    {"slug": "7x10", "name": "7x10 ft", "type": "size"},
+    {"slug": "6x9", "name": "6x9 ft", "type": "size"},
+    {"slug": "6x8-5x8", "name": "6x8 ft - 5x8 ft", "type": "size"},
+    {"slug": "5x7", "name": "5x7 ft", "type": "size"},
+    {"slug": "4x6", "name": "4x6 ft", "type": "size"},
+    {"slug": "3x5", "name": "3x5 ft", "type": "size"},
+    {"slug": "1x2-3x4", "name": "1x2 ft - 3x4 ft", "type": "size"},
+    {"slug": "multicolor", "name": "Multicolor", "type": "color"},
+    {"slug": "beige", "name": "Beige", "type": "color"},
+    {"slug": "red", "name": "Red", "type": "color"},
+    {"slug": "blue", "name": "Blue", "type": "color"},
+    {"slug": "black", "name": "Black", "type": "color"},
+    {"slug": "brown", "name": "Brown", "type": "color"},
+    {"slug": "grey", "name": "Grey", "type": "color"},
+    {"slug": "green", "name": "Green", "type": "color"},
+    {"slug": "gold", "name": "Gold", "type": "color"},
+    {"slug": "purple", "name": "Purple", "type": "color"},
+    {"slug": "pink", "name": "Pink", "type": "color"},
+    {"slug": "orange", "name": "Orange", "type": "color"},
+    {"slug": "rug-pads", "name": "Rug Pads Collection", "type": "main"},
+    {"slug": "clearance", "name": "Clearance Collection", "type": "main"}
+  ],
+  "reviews": [
+    {
+      "name": "Sarah M.",
+      "location": "East Meadow, NY",
+      "rating": 5,
+      "title": "Wonderful! - stunning!",
+      "text": "Love my new rug! 100% every penny. The colors are beautiful! Exactly what I was looking for.",
+      "date": "1 month ago",
+      "verified": true
+    },
+    {
+      "name": "David R.",
+      "location": "Lewes, DE",
+      "rating": 5,
+      "title": "Great runners",
+      "text": "While somewhat hard to find in matching runners, finally found two beautiful matching ones that I love!",
+      "date": "1 month ago",
+      "verified": true
+    },
+    {
+      "name": "Jennifer S.",
+      "location": "Lewes, DE",
+      "rating": 5,
+      "title": "Fantastic!",
+      "text": "Great color, quick delivery, nice weight and construction, seems very high quality and beautiful.",
+      "date": "1 month ago",
+      "verified": true
+    },
+    {
+      "name": "Emma K.",
+      "location": "Minneapolis, MN",
+      "rating": 5,
+      "title": "This rug is so beautiful!",
+      "text": "I was very nervous purchasing a hand knotted rug online. Normally I buy in person. This rug exceeded my expectations!",
+      "date": "2 months ago",
+      "verified": true
+    },
+    {
+      "name": "Carol P.",
+      "location": "Los Angeles, CA",
+      "rating": 5,
+      "title": "Great!",
+      "text": "It is very beautiful! The quality is outstanding and the colors are vibrant.",
+      "date": "3 months ago",
+      "verified": true
+    },
+    {
+      "name": "Robin L.",
+      "location": "Portland, OR",
+      "rating": 5,
+      "title": "Beautiful, quality, fast shipping",
+      "text": "I had hesitated to buy online, but their prices were much more affordable than local shops. Absolutely stunning rug!",
+      "date": "3 months ago",
+      "verified": true
+    }
+  ]
+}
