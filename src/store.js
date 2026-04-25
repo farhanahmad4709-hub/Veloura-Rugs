@@ -228,6 +228,24 @@ export function logout() {
   document.cookie = "veloura_session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
+export function updateUser(data) {
+  const user = getUser();
+  if (!user) return null;
+  
+  const updated = { ...user, ...data };
+  set(KEYS.USER, updated);
+  
+  // Also update in accounts list
+  const accounts = get('veloura_accounts') || [];
+  const idx = accounts.findIndex(a => a.id === user.id);
+  if (idx > -1) {
+    accounts[idx] = updated;
+    set('veloura_accounts', accounts);
+  }
+  return updated;
+}
+
+
 // ---- Contact Form ----
 export function saveContact(data) {
   const contacts = get(KEYS.CONTACTS) || [];

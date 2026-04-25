@@ -250,6 +250,39 @@ function setupUI() {
     chatPanel?.classList.remove('active');
   });
 
+  const chatInput = document.getElementById('chat-input');
+  const chatSendBtn = document.getElementById('chat-send-btn');
+  const chatBody = document.querySelector('.chat-body');
+
+  function handleChatSend() {
+    const message = chatInput?.value?.trim();
+    if (!message) return;
+
+    // Display user message
+    const userMsg = document.createElement('div');
+    userMsg.className = 'chat-message user';
+    userMsg.innerHTML = `<p>${message}</p>`;
+    chatBody?.appendChild(userMsg);
+    
+    if (chatInput) chatInput.value = '';
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    // Simulate support response
+    setTimeout(() => {
+      const botMsg = document.createElement('div');
+      botMsg.className = 'chat-message bot';
+      botMsg.innerHTML = `<p>Thank you for reaching out! Our support team is currently assisting other customers, but we've received your message and will get back to you soon. 😊</p>`;
+      chatBody?.appendChild(botMsg);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 1000);
+  }
+
+  chatSendBtn?.addEventListener('click', handleChatSend);
+  chatInput?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') handleChatSend();
+  });
+
+
   // Footer Currency Selector
   const currencyBtn = document.getElementById('currency-btn');
   const currencyDropdown = document.getElementById('currency-dropdown');
