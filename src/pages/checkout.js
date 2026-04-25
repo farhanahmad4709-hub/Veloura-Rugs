@@ -99,7 +99,7 @@ export function renderCheckout(container) {
               </div>
             </div>
 
-            <button type="submit" class="btn btn-gold btn--full" style="margin-top:2rem;padding:1.2rem;">Complete Purchase — $${total.toLocaleString()}</button>
+            <button type="submit" class="btn btn-gold btn--full" style="margin-top:2rem;padding:1.2rem;">Complete Purchase — ${window.formatPrice(total)}</button>
           </form>
         </div>
 
@@ -118,14 +118,14 @@ export function renderCheckout(container) {
                   <div class="summary-item-title">${item.title}</div>
                   <div class="summary-item-qty">Qty: ${item.qty}</div>
                 </div>
-                <div class="summary-item-price">$${(item.price * item.qty).toLocaleString()}</div>
+                <div class="summary-item-price">${window.formatPrice(item.price * item.qty)}</div>
               </div>
             `;}).join('')}
           </div>
           <div class="summary-totals">
             <div class="summary-row">
               <span>Subtotal</span>
-              <span>$${total.toLocaleString()}</span>
+              <span>${window.formatPrice(total)}</span>
             </div>
             <div class="summary-row">
               <span>Shipping</span>
@@ -133,7 +133,7 @@ export function renderCheckout(container) {
             </div>
             <div class="summary-row total">
               <span>Total</span>
-              <span>$${total.toLocaleString()}</span>
+              <span>${window.formatPrice(total)}</span>
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@ function processOrder(container) {
           </div>
           <div class="order-detail-row">
             <span>Total Amount:</span>
-            <strong>$${total.toLocaleString()}</strong>
+            <strong>${window.formatPrice(total)}</strong>
           </div>
           <div class="order-detail-row">
             <span>Status:</span>

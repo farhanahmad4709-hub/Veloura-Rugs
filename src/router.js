@@ -61,8 +61,8 @@ export function handleRoute() {
       container.innerHTML = '<div class="section" style="text-align:center;padding:100px 20px;"><h1>Page Not Found</h1><p>The page you are looking for does not exist.</p><a href="#/" class="btn btn--primary" style="margin-top:20px;">Go Home</a></div>';
     }
   } catch(e) {
-    alert("Routing Error: " + e.stack);
-    console.error(e);
+    console.error("Routing Error:", e);
+    alert("Routing Error:\n" + e.message + "\n\nStack:\n" + e.stack);
   }
 }
 

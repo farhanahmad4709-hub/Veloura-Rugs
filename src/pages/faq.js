@@ -12,7 +12,7 @@ export function renderFaq(container) {
           { q: 'What materials are used in your rugs?', a: 'Our rugs are made from premium Afghan Ghazni Wool with cotton foundations. We use natural vegetable dyes to create vibrant, long-lasting colors.' },
           { q: 'How long does shipping take?', a: 'Standard shipping takes 5-7 business days within the US. For international orders, please contact us for estimated delivery times.' },
           { q: 'What is your return policy?', a: 'All rugs come with a 30-day return policy. Items must be in their original, unused condition. Please contact us at velourarugs@hotmail.com to initiate a return.' },
-          { q: 'Do you offer free shipping?', a: 'Yes! We offer free shipping on all rug orders over $300. For orders under $300, a flat shipping fee applies.' },
+          { q: 'Do you offer free shipping?', a: 'Yes! We offer free shipping on all rug orders over ${window.formatPrice(300)}. For orders under ${window.formatPrice(300)}, a flat shipping fee applies.' },
           { q: 'How do I care for my hand-knotted rug?', a: 'We recommend regular vacuuming (without the beater bar), rotating the rug periodically for even wear, and professional cleaning when needed. Avoid direct sunlight for extended periods.' },
           { q: 'Are your prices negotiable?', a: 'Our listed prices are already discounted up to 60% off retail. Additionally, you can use code EXTRA15%OFF for an extra 15% discount on your entire order.' },
           { q: 'Can I visit your showroom?', a: 'Yes! Our showroom is located at 4731 Pell Dr, Ste 5, Sacramento, CA 95838. We are open Monday-Saturday by appointment only. Please call +1 415 565 1579 to schedule a visit.' },

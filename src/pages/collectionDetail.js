@@ -113,10 +113,10 @@ export function renderCollectionDetail(container, params) {
           </div>
           <div class="price-range">
             <span>From</span>
-            <input type="number" id="price-from" value="0" min="0" placeholder="$ 0" />
+            <input type="number" id="price-from" value="0" min="0" placeholder="0" />
             <span>-</span>
             <span>To</span>
-            <input type="number" id="price-to" value="17000" placeholder="$ 17000" />
+            <input type="number" id="price-to" value="25000" placeholder="25000" />
           </div>
         </div>
       </aside>
@@ -279,7 +279,7 @@ export function renderCollectionDetail(container, params) {
       group.querySelectorAll('.active').forEach(a => a.classList.remove('active'));
       if (group.querySelector('input')) {
         document.getElementById('price-from').value = 0;
-        document.getElementById('price-to').value = 17000;
+        document.getElementById('price-to').value = 25000;
       }
       applyAllFilters();
     });

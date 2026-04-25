@@ -77,24 +77,7 @@ const policies = {
   },
   shipping: {
     title: 'Shipping Policy',
-    content: `
-      <h2>Domestic Shipping (United States)</h2>
-      <p>We offer FREE shipping on all orders over $300 within the continental United States.</p>
-      <p>Orders under $300 will be charged a flat rate shipping fee.</p>
-      <p>Standard delivery takes 5-7 business days from the date of shipment.</p>
-      
-      <h2>Processing Time</h2>
-      <p>All orders are processed within 1-2 business days. Orders placed on weekends or holidays will be processed on the next business day.</p>
-      
-      <h2>Tracking</h2>
-      <p>Once your order has shipped, you will receive a shipping confirmation email with a tracking number. You can use this tracking number to monitor the delivery status of your order.</p>
-      
-      <h2>International Shipping</h2>
-      <p>For international orders, please contact us directly at velourarugs@hotmail.com for shipping quotes and estimated delivery times.</p>
-      
-      <h2>Shipping Insurance</h2>
-      <p>All orders are fully insured during transit. If your order arrives damaged, please contact us immediately with photos of the damage and we will arrange a replacement or refund.</p>
-    `
+    content: '' // Dynamic content generated in renderPolicy
   },
   'contact-info': {
     title: 'Contact Information',
@@ -123,17 +106,44 @@ const policies = {
 
 export function renderPolicy(container, params) {
   const type = params.type;
-  const policy = policies[type];
+  const policyData = policies[type];
   
-  if (!policy) {
+  if (!policyData) {
     container.innerHTML = '<div class="section" style="text-align:center;padding:100px;"><h1>Page Not Found</h1></div>';
     return;
   }
 
+  // Generate content dynamically to ensure window.formatPrice is available
+  let content = policyData.content;
+  if (type === 'shipping') {
+    content = `
+      <h2>Domestic Shipping (United States)</h2>
+      <p>We offer FREE shipping on all orders over ${window.formatPrice(300)} within the continental United States.</p>
+      <p>Orders under ${window.formatPrice(300)} will be charged a flat rate shipping fee.</p>
+      <p>Standard delivery takes 5-7 business days from the date of shipment.</p>
+      
+      <h2>Processing Time</h2>
+      <p>All orders are processed within 1-2 business days. Orders placed on weekends or holidays will be processed on the next business day.</p>
+      
+      <h2>Tracking</h2>
+      <p>Once your order has shipped, you will receive a shipping confirmation email with a tracking number. You can use this tracking number to monitor the delivery status of your order.</p>
+      
+      <h2>International Shipping</h2>
+      <p>For international orders, please contact us directly at velourarugs@hotmail.com for shipping quotes and estimated delivery times.</p>
+      
+      <h2>Shipping Insurance</h2>
+      <p>All orders are fully insured during transit. If your order arrives damaged, please contact us immediately with photos of the damage and we will arrange a replacement or refund.</p>
+    `;
+  }
+
   container.innerHTML = `
     <div class="policy-page">
-      <h1>${policy.title}</h1>
-      ${policy.content}
+      <h1>${policyData.title}</h1>
+      <div class="policy-content">
+        ${content}
+      </div>
     </div>
   `;
 }
+
+

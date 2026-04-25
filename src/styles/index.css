@@ -315,7 +315,7 @@ footer .logo-img { height: 44px; }
   position: absolute;
   inset: 0;
   width: 100%; height: 100%;
-  background: url('/images/Poster_2.png') center/cover no-repeat;
+  background: url('/Veloura-Rugs/images/Poster_2.png') center/cover no-repeat;
   transform: scale(1.04);
   animation: zoomOut 8s ease forwards;
 }
@@ -777,8 +777,28 @@ footer {
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
-.footer-brand .logo { color: var(--white); font-size: 1.5rem; margin-bottom: .8rem; }
-.footer-brand .logo span { color: var(--gold-lt); }
+.footer-brand .logo { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--white); 
+  margin-bottom: 1rem; 
+  width: max-content;
+  text-decoration: none;
+}
+.footer-brand .logo-img {
+  height: 50px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+.footer-brand .logo span { 
+  font-size: 1.6rem;
+  color: var(--gold-lt);
+  font-family: var(--ff-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 .footer-brand p { font-size: var(--fs-sm); opacity: .6; font-style: italic; margin-bottom: 1.2rem; }
 .footer-contact p { font-size: var(--fs-sm); line-height: 1.8; opacity: .7; }
 .footer-col h4 {
@@ -922,10 +942,11 @@ footer {
 .mobile-nav-header .logo {
   position: static;
   transform: none;
-  flex-direction: row;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
 }
-.mobile-nav-header .logo-img { height: 35px; }
+.mobile-nav-header .logo-img { height: 40px; }
 .mobile-nav-header .logo span { font-size: 1rem; }
 
 .mobile-nav-close {
@@ -969,7 +990,7 @@ footer {
 
 @media (max-width: 900px) {
   .header-inner { 
-    height: 80px; 
+    height: 90px; 
     display: flex; 
     justify-content: space-between; 
     padding: 0 1rem;
@@ -984,16 +1005,16 @@ footer {
   .mobile-menu-toggle { display: flex; z-index: 20; }
   
   header .logo { 
-    position: static; 
-    transform: none; 
-    flex-direction: row; 
-    gap: 0.6rem;
-    margin: 0 auto;
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column; 
+    gap: 0.1rem;
     z-index: 20;
   }
   
-  .logo-img { height: 40px; }
-  .logo span { font-size: 1.1rem; }
+  .logo-img { height: 50px; }
+  .logo span { font-size: 1rem; }
 
   .collections-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .style-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1029,8 +1050,8 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .logo span { display: none; } /* Show only icon on very small screens */
-  .header-inner { height: 70px; }
+  /* .logo span { display: none; } removed so text shows on mobile */
+  .header-inner { height: 85px; }
   
   .products-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .collections-grid { grid-template-columns: 1fr; }
@@ -1123,6 +1144,134 @@ main {
   align-items: center;
   justify-content: center;
 }
+/* Collections Page */
+.collections-page {
+  padding: 8rem 5% 12rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.collections-header {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.collections-header h1 {
+  font-size: 4.8rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  margin-right: -0.1em; /* Compensate for letter-spacing to center perfectly */
+  text-transform: uppercase;
+}
+
+.collections-header p {
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.collections-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 4rem;
+}
+
+.collections-page-card {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3.5rem;
+  text-decoration: none;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: #fdfdfd;
+}
+
+.collections-page-card:hover {
+  transform: translateY(-10px);
+}
+.collections-page-card__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.collections-page-card:hover .collections-page-card__bg {
+  transform: scale(1.1);
+}
+.collections-page-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%);
+  transition: opacity 0.4s ease;
+}
+.collections-page-card:hover .collections-page-card__overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 100%);
+}
+.collections-page-card__content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  transition: transform 0.4s ease;
+}
+.collections-page-card__label {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+}
+.collections-page-card__action {
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  display: block;
+  font-weight: 600;
+  color: var(--color-gold);
+}
+.collections-page-card:hover .collections-page-card__action {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .collections-page {
+    padding: 6rem 2rem 8rem;
+  }
+  .collections-header {
+    margin-bottom: 4rem;
+  }
+  .collections-header h1 {
+    font-size: 3.2rem;
+    letter-spacing: 0.05em;
+    margin-right: -0.05em;
+  }
+
+  .collections-header p {
+    font-size: 1.5rem;
+  }
+  .collections-page-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .collections-page-card {
+    height: 320px;
+    padding: 2.5rem;
+  }
+  .collections-page-card__label {
+    font-size: 2.2rem;
+  }
+}
+
 .cart-item__qty span {
   font-size: var(--fs-sm);
   font-weight: 500;
@@ -1166,51 +1315,8 @@ main {
   color: var(--gold);
 }
 
-/* ─── COLLECTIONS PAGE ─────────────────────────────────── */
-.collections-page {
-  max-width: 1340px;
-  margin: auto;
-  padding: 4rem 2rem;
-}
-.collections-page h1 {
-  font-family: var(--ff-display);
-  font-size: var(--fs-3xl);
-  text-align: center;
-  margin-bottom: 3rem;
-  color: var(--green);
-}
-.collections-page-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-.collections-page-card {
-  position: relative;
-  aspect-ratio: 16/9;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: transform .3s;
-}
-.collections-page-card:hover { transform: translateY(-4px); }
-.collections-page-card__bg {
-  width: 100%; height: 100%;
-  transition: transform .5s;
-}
-.collections-page-card:hover .collections-page-card__bg { transform: scale(1.05); }
-.collections-page-card__label {
-  position: absolute;
-  inset: 0;
-  background: rgba(27,58,47,.4);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--white);
-  font-family: var(--ff-display);
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  text-shadow: 0 2px 10px rgba(0,0,0,.3);
-}
+/* Category Details removed redundant */
+
 
 /* ─── CATEGORY / COLLECTION DETAIL PAGE ────────────────── */
 .collection-banner {
@@ -1512,7 +1618,7 @@ main {
 }
 .about-hero::before {
   content: ''; position: absolute; inset: 0;
-  background: url('/images/Poster_2.png') center/cover;
+  background: url('/Veloura-Rugs/images/Poster_2.png') center/cover;
   opacity: .3;
 }
 .about-hero__text {
@@ -1605,7 +1711,7 @@ main {
 }
 .auth-page__image::before {
   content: ''; position: absolute; inset: 0;
-  background: url('/images/Poster_2.png') center/cover;
+  background: url('/Veloura-Rugs/images/Poster_2.png') center/cover;
   opacity: .2;
 }
 .auth-page__image-text { z-index: 2; position: relative; }

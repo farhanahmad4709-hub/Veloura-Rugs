@@ -1,11 +1,15 @@
 // ========================================
 // Main Entry Point — Veloura Rugs
 // ========================================
+console.log("Veloura Rugs: Main module loading...");
+
 import { addRoute, initRouter, handleRoute } from './router.js';
+
 import { getCart, getCartTotal, getCartCount, updateCartQty, setProductData, getProductData, toggleWishlist as storeToggleWishlist, updateWishlistUI, isLoggedIn } from './store.js';
 
 // Pages
 import { renderHome } from './pages/home.js';
+
 import { renderCollections } from './pages/collections.js';
 import { renderCollectionDetail } from './pages/collectionDetail.js';
 import { renderProductDetail } from './pages/productDetail.js';
@@ -18,6 +22,29 @@ import { renderWishlist } from './pages/wishlist.js';
 import { renderFaq } from './pages/faq.js';
 import { renderPolicy } from './pages/policy.js';
 import { renderCheckout } from './pages/checkout.js';
+
+// Global Currency Configuration
+window.selectedCurrency = localStorage.getItem('selectedCurrency') || 'PKR';
+const currencyRates = {
+  PKR: { rate: 1, suffix: ' PKR', name: 'Pakistan (PKR Rs)' },
+  USD: { rate: 1/280, prefix: '$', name: 'United States (USD $)' },
+  EUR: { rate: 0.92/280, prefix: '€', name: 'European Union (EUR €)' },
+  GBP: { rate: 0.79/280, prefix: '£', name: 'United Kingdom (GBP £)' },
+  CAD: { rate: 1.36/280, prefix: 'C$', name: 'Canada (CAD $)' },
+  AUD: { rate: 1.53/280, prefix: 'A$', name: 'Australia (AUD $)' }
+};
+
+
+window.formatPrice = function(price) {
+  if (price === undefined || price === null || isNaN(Number(price))) return '0.00';
+  const c = currencyRates[window.selectedCurrency] || currencyRates.PKR;
+  const converted = Number(price) * c.rate;
+  const fraction = window.selectedCurrency === 'PKR' ? 0 : 2;
+  const numStr = converted.toLocaleString('en-US', {minimumFractionDigits: fraction, maximumFractionDigits: fraction});
+  return `${c.prefix || ''}${numStr}${c.suffix || ''}`;
+};
+
+
 
 // Load product data
 async function loadData() {
@@ -171,7 +198,7 @@ function setupUI() {
           </div>
           <div class="search-result-item__info">
             <h4>${p.title}</h4>
-            <span class="price">$${p.price.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
+            <span class="price">${window.formatPrice(p.price)}</span>
           </div>
         </a>
       `;}).join('');
@@ -227,21 +254,26 @@ function setupUI() {
   const currencyBtn = document.getElementById('currency-btn');
   const currencyDropdown = document.getElementById('currency-dropdown');
 
+  if (currencyBtn) {
+    const c = currencyRates[window.selectedCurrency] || currencyRates.PKR;
+    currencyBtn.innerHTML = `${c.name} <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`;
+  }
+
   currencyBtn?.addEventListener('click', (e) => {
     e.stopPropagation();
     currencyDropdown?.classList.toggle('active');
   });
 
   document.querySelectorAll('.currency-option').forEach(opt => {
+    if (opt.getAttribute('data-currency') === window.selectedCurrency) {
+      opt.classList.add('active');
+    } else {
+      opt.classList.remove('active');
+    }
     opt.addEventListener('click', (e) => {
       e.preventDefault();
-      const currency = opt.getAttribute('data-currency');
-      if (currencyBtn) {
-        currencyBtn.innerHTML = `United States (${currency} $) <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`;
-      }
-      document.querySelectorAll('.currency-option').forEach(o => o.classList.remove('active'));
-      opt.classList.add('active');
-      currencyDropdown?.classList.remove('active');
+      localStorage.setItem('selectedCurrency', opt.getAttribute('data-currency'));
+      location.reload();
     });
   });
 
@@ -310,7 +342,7 @@ function renderCartDrawer() {
       </div>
       <div class="cart-item__details">
         <div class="cart-item__title">${item.title}</div>
-        <div class="cart-item__price">$${item.price.toLocaleString('en-US', {minimumFractionDigits: 2})}</div>
+        <div class="cart-item__price">${window.formatPrice(item.price)}</div>
         <div class="cart-item__qty">
           <button onclick="window.updateCartItem('${item.id}', ${item.qty - 1})">−</button>
           <span>${item.qty}</span>
@@ -323,7 +355,7 @@ function renderCartDrawer() {
 
   if (cartFooter) cartFooter.style.display = 'block';
   const subtotal = document.getElementById('cart-subtotal');
-  if (subtotal) subtotal.textContent = `$${getCartTotal().toLocaleString('en-US', {minimumFractionDigits: 2})}`;
+  if (subtotal) subtotal.textContent = `${window.formatPrice(getCartTotal())}`;
   if (itemsCount) itemsCount.textContent = `${getCartCount()} ITEMS`;
 }
 
@@ -358,7 +390,7 @@ window.openQuickView = (id) => {
       <div class="quick-view-info">
         <span class="qv-vendor">VELOURA RUGS</span>
         <h2>${product.title}</h2>
-        <div class="qv-price">$${product.price.toLocaleString()} ${product.comparePrice ? `<span class="qv-compare">$${product.comparePrice.toLocaleString()}</span>` : ''}</div>
+        <div class="qv-price">${window.formatPrice(product.price)} ${product.comparePrice ? `<span class="qv-compare">${window.formatPrice(product.comparePrice)}</span>` : ''}</div>
         <p class="qv-desc">${product.description?.material || 'Hand-knotted with premium wool'}. Origin: ${product.description?.origin || 'Afghanistan'}.</p>
         <div class="qv-actions">
           <button class="btn btn--dark btn--full" onclick="window.location.hash='#/product/${product.slug}'; window.closeQuickView();">VIEW FULL DETAILS</button>
@@ -385,9 +417,26 @@ async function init() {
     setupRoutes();
     setupUI();
     initRouter();
+    
+    // Explicitly handle the initial route if the router didn't set content
+    const container = document.getElementById('main-content');
+    if (container && container.innerHTML.trim() === "") {
+      renderHome(container);
+    }
   } catch (err) {
     console.error("Initialization error:", err);
+    const container = document.getElementById('main-content');
+    if (container) {
+      container.innerHTML = `<div class="section" style="text-align:center;padding:100px 20px;">
+        <h2>Oops! Something went wrong.</h2>
+        <p>We couldn't load the page content. Please try refreshing.</p>
+        <button class="btn btn-gold" onclick="location.reload()">Refresh Page</button>
+      </div>`;
+    }
   }
 }
 
 init();
+
+
+

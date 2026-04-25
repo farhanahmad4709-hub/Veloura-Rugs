@@ -13,42 +13,46 @@ export function renderCollections(container) {
 
   container.innerHTML = `
     <div class="collections-page">
-      <h1>Collections</h1>
+      <div class="collections-header">
+        <h1>Our Collections</h1>
+        <p>Explore our curated selections of hand-knotted artistry, categorized by size and style.</p>
+      </div>
+
       <div class="collections-page-grid">
           ${sizeCollections.map((col, i) => {
-            const colors = rugColors[i % rugColors.length];
-            
-            // Try to find a real product image for this size collection
-            const categoryProducts = data?.products?.filter(p => 
+            // 1. Try to find products specifically in this collection
+            let categoryProducts = data?.products?.filter(p => 
               p.size === col.name || 
               (p.collections && p.collections.includes(col.slug))
             ) || [];
             
+            // 2. If none, find products with a similar size name or just any high-quality rug
+            if (categoryProducts.length === 0) {
+              categoryProducts = data?.products?.filter(p => p.images && p.images.length > 0) || [];
+            }
+            
+            // 3. Pick a "beautiful" image (using index to keep it consistent but varied)
+            const imgIndex = i % categoryProducts.length;
             const fallbackImg = categoryProducts.length > 0 
-              ? categoryProducts[0].images[0] 
-              : generateRugSVG(colors, i % 4);
+              ? categoryProducts[imgIndex].images[0] 
+              : 'images/Poster_2.png';
               
             const imgSrc = col.image || fallbackImg;
             
             return `
               <a href="#/collection/${col.slug}" class="collections-page-card">
                 <div class="collections-page-card__bg" style="background-image:url('${imgSrc}');">
+                  <div class="collections-page-card__overlay"></div>
                 </div>
-                <span class="collections-page-card__label">${col.name}</span>
+                <div class="collections-page-card__content">
+                  <span class="collections-page-card__label">${col.name}</span>
+                  <span class="collections-page-card__action">Explore Collection →</span>
+                </div>
               </a>
             `;
           }).join('')}
       </div>
-
-      <!-- Pagination -->
-      <div class="pagination" style="margin-top:40px;">
-        <button class="active">1</button>
-        <button>2</button>
-        <button>3</button>
-        <span style="padding:0 8px;">...</span>
-        <button>5</button>
-        <button>→</button>
-      </div>
     </div>
+
   `;
 }

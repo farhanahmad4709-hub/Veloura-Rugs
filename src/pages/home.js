@@ -270,7 +270,7 @@ export function renderHome(container) {
       <div class="hero-overlay">
         <div class="hero-content">
           <span class="hero-label">NEW ARRIVALS</span>
-          <h1>Artistry and History in Every Knot</h1>
+          <h1>Artistry Carpets & Rugs</h1>
           <p>Explore our curated collection of authentic, hand-knotted vintage rugs from the heart of the East.</p>
           <div class="hero-btns">
             <a href="#/collection/all-rugs" class="btn btn-gold">Shop Collection</a>
@@ -284,7 +284,7 @@ export function renderHome(container) {
       <div class="trust-inner">
         <div class="trust-item">
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          Free Shipping on Orders Over $300
+          Free Shipping on Orders Over ${window.formatPrice(300)}
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -507,8 +507,8 @@ export function renderProductCard(product, index = 0) {
   }
   
   const hoverImgSrc = validImages[1] || imgSrc;
-  const priceSale = product.price ? product.price.toLocaleString('en-US', {minimumFractionDigits: 2}) : '0.00';
-  const priceOrig = product.comparePrice ? product.comparePrice.toLocaleString('en-US', {minimumFractionDigits: 2}) : null;
+  const priceSale = product.price ? window.formatPrice(product.price) : '0.00';
+  const priceOrig = product.comparePrice ? window.formatPrice(product.comparePrice) : null;
   const isSale = !!product.comparePrice;
 
   return `
@@ -531,8 +531,8 @@ export function renderProductCard(product, index = 0) {
         <p class="product-vendor">Veloura Rugs</p>
         <h3 class="product-name">${product.title}</h3>
         <div class="product-price">
-          <span class="price-sale">$${priceSale}</span>
-          ${priceOrig ? `<span class="price-orig">$${priceOrig}</span>` : ''}
+          <span class="price-sale">${priceSale}</span>
+          ${priceOrig ? `<span class="price-orig">${priceOrig}</span>` : ''}
         </div>
         <button class="product-cta" onclick="event.stopPropagation(); window.location.hash='#/product/${product.slug}'">View Full Details</button>
       </div>

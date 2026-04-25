@@ -36,7 +36,7 @@ export function renderAccount(container) {
                   </div>
                   <div class="order-total">
                     <span class="label">Total</span>
-                    <strong>$${order.total.toLocaleString()}</strong>
+                    <strong>${window.formatPrice(order.total)}</strong>
                   </div>
                   <div class="order-status">
                     <span class="label">Status</span>

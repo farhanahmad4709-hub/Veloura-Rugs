@@ -65,8 +65,8 @@ export function renderProductDetail(container, params) {
         <div class="product-info__sku">${product.sku}</div>
         
         <div class="product-info__prices">
-          <span class="product-info__price">$${product.price.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
-          ${product.comparePrice ? `<span class="product-info__compare">$${product.comparePrice.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>` : ''}
+          <span class="product-info__price">${window.formatPrice(product.price)}</span>
+          ${product.comparePrice ? `<span class="product-info__compare">${window.formatPrice(product.comparePrice)}</span>` : ''}
         </div>
 
         ${product.inStock ? '<div class="product-info__stock">⟡ 1 in Stock</div>' : '<div class="product-info__stock" style="color:var(--color-sale);">Out of Stock</div>'}
@@ -103,7 +103,7 @@ export function renderProductDetail(container, params) {
               <span class="product-accordion__icon">↓</span>
             </button>
             <div class="product-accordion__content" id="accordion-shipping">
-              <p>Free shipping on orders over $300. Standard delivery within 5-7 business days.</p>
+              <p>Free shipping on orders over ${window.formatPrice(300)}. Standard delivery within 5-7 business days.</p>
               <p>All rugs come with a 30-day return policy. Items must be in original condition.</p>
               <p>For returns, please contact us at velourarugs@hotmail.com</p>
             </div>
