@@ -25,14 +25,55 @@ const KEYS = {
 
 // ---- Orders ----
 export function getOrders() {
-  return get(KEYS.ORDERS) || [];
+  const user = getUser();
+  if (!user) return [];
+  
+  const orders = get(KEYS.ORDERS) || [];
+  let updated = false;
+  
+  // Filter only orders for the current user
+  const userOrders = orders.filter(o => o.userId === user.id);
+  
+  userOrders.forEach(order => {
+    if (order.status !== 'Delivered' && order.timestamp) {
+      const elapsed = Date.now() - order.timestamp;
+      if (elapsed >= 60000) {
+        order.status = 'Delivered';
+        updated = true;
+      } else if (elapsed >= 10000 && order.status === 'Processing') {
+        order.status = 'Shipped';
+        updated = true;
+      }
+    }
+  });
+
+  if (updated) {
+    set(KEYS.ORDERS, orders);
+  }
+  return userOrders;
 }
 
 export function saveOrder(order) {
-  const orders = getOrders();
+  const user = getUser();
+  if (!user) return [];
+  
+  const orders = get(KEYS.ORDERS) || [];
+  if (!order.timestamp) {
+    order.timestamp = Date.now();
+  }
+  order.userId = user.id;
   orders.unshift(order); // Newest first
   set(KEYS.ORDERS, orders);
   return orders;
+}
+
+export function updateOrderStatus(orderId, status) {
+  const orders = getOrders();
+  const order = orders.find(o => o.id === orderId);
+  if (order) {
+    order.status = status;
+    set(KEYS.ORDERS, orders);
+  }
 }
 
 function get(key) {

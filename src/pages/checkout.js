@@ -1,7 +1,7 @@
 // ========================================
 // Checkout Page
 // ========================================
-import { getCart, getCartTotal, removeFromCart, saveOrder, getProductData, isLoggedIn } from '../store.js';
+import { getCart, getCartTotal, removeFromCart, saveOrder, updateOrderStatus, getProductData, isLoggedIn } from '../store.js';
 import { navigate } from '../router.js';
 
 export function renderCheckout(container) {
@@ -60,10 +60,40 @@ export function renderCheckout(container) {
               </div>
             </div>
             
-            <h2 style="margin-top:2rem">Payment</h2>
+            <h2 style="margin-top:2rem">Payment Method</h2>
             <div class="payment-box">
-              <p>Demo Mode: All transactions are simulated.</p>
-              <div class="form-group">
+              <p style="margin-bottom: 1rem; color: var(--muted); font-size: 0.9rem;">Demo Mode: All transactions are simulated.</p>
+              
+              <div class="payment-methods" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+                <label class="payment-method-label" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="payment_method" value="credit_card" checked style="width: auto; margin: 0;" />
+                  <span style="display: flex; align-items: center; gap: 0.5rem; flex: 1;">
+                    <strong>Credit Card (Visa / Mastercard)</strong>
+                  </span>
+                  <div style="display: flex; gap: 0.5rem;">
+                    <i class="fa-brands fa-cc-visa" style="font-size: 1.5rem; color: #1434CB;"></i>
+                    <i class="fa-brands fa-cc-mastercard" style="font-size: 1.5rem; color: #EB001B;"></i>
+                  </div>
+                </label>
+
+                <label class="payment-method-label" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="payment_method" value="apple_pay" style="width: auto; margin: 0;" />
+                  <span style="display: flex; align-items: center; gap: 0.5rem; flex: 1;">
+                    <strong>Apple Pay</strong>
+                  </span>
+                  <i class="fa-brands fa-apple-pay" style="font-size: 1.8rem; color: #000;"></i>
+                </label>
+
+                <label class="payment-method-label" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="payment_method" value="google_pay" style="width: auto; margin: 0;" />
+                  <span style="display: flex; align-items: center; gap: 0.5rem; flex: 1;">
+                    <strong>Google Pay</strong>
+                  </span>
+                  <i class="fa-brands fa-google-pay" style="font-size: 1.8rem; color: #5F6368;"></i>
+                </label>
+              </div>
+
+              <div class="form-group" id="card-input-group">
                 <label>Card Number</label>
                 <input type="text" placeholder="XXXX XXXX XXXX XXXX" disabled value="4242 4242 4242 4242" />
               </div>
@@ -113,6 +143,35 @@ export function renderCheckout(container) {
 
   // Handle Form Submission
   const form = document.getElementById('checkout-form');
+  
+  // Payment method toggles
+  const paymentRadios = document.querySelectorAll('input[name="payment_method"]');
+  const cardInputGroup = document.getElementById('card-input-group');
+  const paymentLabels = document.querySelectorAll('.payment-method-label');
+
+  paymentRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      // Style active label
+      paymentLabels.forEach(lbl => lbl.style.borderColor = 'var(--border)');
+      if (e.target.checked) {
+        e.target.closest('label').style.borderColor = 'var(--gold)';
+      }
+      
+      // Toggle card input
+      if (e.target.value === 'credit_card') {
+        cardInputGroup.style.display = 'block';
+      } else {
+        cardInputGroup.style.display = 'none';
+      }
+    });
+  });
+  
+  // Trigger change on default checked to set initial border
+  const checkedRadio = document.querySelector('input[name="payment_method"]:checked');
+  if (checkedRadio) {
+    checkedRadio.closest('label').style.borderColor = 'var(--gold)';
+  }
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     processOrder(container);
@@ -178,6 +237,7 @@ function processOrder(container) {
       statusEl.className = 'status-badge shipped';
     }
     stepShipped?.classList.add('active');
+    updateOrderStatus(orderId, 'Shipped');
   }, 10000); // Shipped after 10s for demo
 
   setTimeout(() => {
@@ -188,5 +248,6 @@ function processOrder(container) {
       statusEl.className = 'status-badge delivered';
     }
     stepDelivered?.classList.add('active');
-  }, 120000); // Delivered after 2 minutes (120000ms)
+    updateOrderStatus(orderId, 'Delivered');
+  }, 60000); // Delivered after 1 minute (60000ms)
 }

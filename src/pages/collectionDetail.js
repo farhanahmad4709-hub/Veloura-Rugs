@@ -12,7 +12,10 @@ export function renderCollectionDetail(container, params) {
   const collections = data?.collections || [];
   
   const collection = collections.find(c => c.slug === slug);
-  const collectionName = collection ? collection.name : slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  let collectionName = collection ? collection.name : slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  
+  // Clean up collection name if it already has "Collection"
+  collectionName = collectionName.replace(/\s+Collection$/i, '');
   
   // Default banner image for main collections
   const defaultBanner = 'https://yildizrugs.com/cdn/shop/files/121029_05c359a6-8b8f-4c29-a30c-2b8f6b2ae814.jpg?v=1737569984&width=3840';
@@ -54,13 +57,20 @@ export function renderCollectionDetail(container, params) {
   container.innerHTML = `
     <!-- Collection Banner -->
     <div class="collection-banner" style="background-image: url('${bannerImage}');">
-      <h1>${collectionName} Collection</h1>
+      <h1>${collectionName}</h1>
     </div>
+
 
     <div class="collection-layout">
       <!-- Sidebar Filters -->
+      <div class="filters-overlay" id="filters-overlay"></div>
       <aside class="filters">
+        <div class="filters-mobile-header">
+          <h3>Filters</h3>
+          <button id="filters-close">&times;</button>
+        </div>
         <div class="filter-group">
+
           <div class="filter-group__header">
             <span class="filter-group__title">COLLECTIONS</span>
             <button class="filter-group__reset" id="reset-collections">Reset</button>
@@ -114,9 +124,16 @@ export function renderCollectionDetail(container, params) {
       <!-- Products -->
       <div class="collection-products">
         <div class="collection-toolbar">
+          <button class="filter-toggle-btn" id="filter-toggle" aria-label="Open Filters">
+            <div class="hamburger-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Filters</span>
+          </button>
           <span class="collection-toolbar__count">Showing ${filtered.length} products</span>
           <div class="collection-toolbar__actions">
-            <span style="font-size:13px;color:#666;">VIEW:</span>
             <div class="collection-toolbar__view">
               <button class="grid-view-btn active" data-cols="4" title="Grid 4">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="3" height="3"/><rect x="5" y="0" width="3" height="3"/><rect x="10" y="0" width="3" height="3"/><rect x="0" y="5" width="3" height="3"/><rect x="5" y="5" width="3" height="3"/><rect x="10" y="5" width="3" height="3"/><rect x="0" y="10" width="3" height="3"/><rect x="5" y="10" width="3" height="3"/><rect x="10" y="10" width="3" height="3"/></svg>
@@ -126,9 +143,8 @@ export function renderCollectionDetail(container, params) {
               </button>
             </div>
             <div class="collection-toolbar__sort">
-              <label style="font-size:13px;color:#666;">SORT BY: </label>
               <select id="sort-select">
-                <option value="best">BEST SELLING</option>
+                <option value="best">SORT BY: BEST SELLING</option>
                 <option value="price-asc">PRICE: LOW TO HIGH</option>
                 <option value="price-desc">PRICE: HIGH TO LOW</option>
                 <option value="name-asc">NAME: A-Z</option>
@@ -137,6 +153,7 @@ export function renderCollectionDetail(container, params) {
             </div>
           </div>
         </div>
+
         <div class="products-grid" id="products-grid"></div>
         <div class="pagination" style="margin-top: 50px;"></div>
       </div>
@@ -267,4 +284,25 @@ export function renderCollectionDetail(container, params) {
       applyAllFilters();
     });
   });
+    const filterToggle = document.getElementById('filter-toggle');
+    const filtersSidebar = document.querySelector('.filters');
+    const filtersClose = document.getElementById('filters-close');
+    const filtersOverlay = document.getElementById('filters-overlay');
+    
+    if (filterToggle && filtersSidebar) {
+      filterToggle.addEventListener('click', () => {
+        filtersSidebar.classList.add('active');
+        if (filtersOverlay) filtersOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+      });
+    }
+    
+    const closeFilters = () => {
+      if (filtersSidebar) filtersSidebar.classList.remove('active');
+      if (filtersOverlay) filtersOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    if (filtersClose) filtersClose.addEventListener('click', closeFilters);
+    if (filtersOverlay) filtersOverlay.addEventListener('click', closeFilters);
 }

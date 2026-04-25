@@ -70,8 +70,10 @@ export function renderHome(container) {
               <input type="email" id="review-email" placeholder="Enter your email" required />
             </div>
           </div>
-          <button type="submit" class="btn btn-dark">Submit Review</button>
-          <button type="button" class="btn btn-outline" id="cancel-review" style="margin-left:1rem">Cancel</button>
+          <div class="review-form-actions">
+            <button type="submit" class="btn btn-dark">Submit Review</button>
+            <button type="button" class="btn btn-outline" id="cancel-review">Cancel</button>
+          </div>
         </form>
         <div id="review-success" style="display:none; text-align:center; padding: 2rem; background: var(--cream); border-radius: 8px;">
           <div style="font-size: 2.5rem; margin-bottom: 1rem;">✓</div>
@@ -305,25 +307,22 @@ export function renderHome(container) {
         <a href="#/collections" class="view-all">View All Collections →</a>
       </div>
       <div class="collections-grid">
-        <div class="collection-box" onclick="window.location.hash='#/collection/traditional'">
+        <div class="coll-card" onclick="window.location.hash='#/collection/traditional'">
           <img src="https://cdn.shopify.com/s/files/1/0462/6808/8473/files/14453.jpg" alt="Traditional Rugs" />
-          <div class="collection-info">
-            <h3>Traditional</h3>
-            <span>Explore →</span>
+          <div class="coll-card-overlay">
+            <span class="coll-card-label">Traditional</span>
           </div>
         </div>
-        <div class="collection-box" onclick="window.location.hash='#/collection/modern'">
+        <div class="coll-card" onclick="window.location.hash='#/collection/modern'">
           <img src="https://cdn.shopify.com/s/files/1/0462/6808/8473/files/118114.jpg" alt="Modern Rugs" />
-          <div class="collection-info">
-            <h3>Modern</h3>
-            <span>Explore →</span>
+          <div class="coll-card-overlay">
+            <span class="coll-card-label">Modern</span>
           </div>
         </div>
-        <div class="collection-box" onclick="window.location.hash='#/collection/mamluk'">
+        <div class="coll-card" onclick="window.location.hash='#/collection/mamluk'">
           <img src="https://cdn.shopify.com/s/files/1/0462/6808/8473/files/il_fullxfull.6368037360_oclm.jpg" alt="Mamluk Rugs" />
-          <div class="collection-info">
-            <h3>Mamluk</h3>
-            <span>Explore →</span>
+          <div class="coll-card-overlay">
+            <span class="coll-card-label">Mamluk</span>
           </div>
         </div>
       </div>
