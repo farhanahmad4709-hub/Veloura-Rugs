@@ -270,5 +270,5 @@ This project is private and proprietary. All rights reserved.
 ---
 
 <p align="center">
-  <strong>Veloura Rugs</strong> — Artistry & History in Every Knot 🧶
+  <strong>Veloura Rugs</strong> — Artistry Carpets & Rugs 🧶
 </p>
