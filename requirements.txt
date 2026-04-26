@@ -8,13 +8,14 @@ npm              >= 9.x
 
 # ─── Dev Dependencies (installed via npm install) ────────
 vite             ^6.0.0
+gh-pages         ^6.3.0
 
 # ─── Setup Instructions ─────────────────────────────────
 # 1. Clone the repository
-#      git clone https://github.com/<your-username>/veloura-rugs.git
+#      git clone https://github.com/farhanahmad4709-hub/Veloura-Rugs.git
 #
 # 2. Navigate into the project
-#      cd veloura-rugs
+#      cd Veloura-Rugs
 #
 # 3. Install dependencies
 #      npm install
@@ -27,27 +28,46 @@ vite             ^6.0.0
 #
 # 6. Preview the production build
 #      npm run preview
+#
+# 7. Deploy to GitHub Pages
+#      npm run deploy
 
 # ─── Project Structure ──────────────────────────────────
-# veloura-rugs/
+# Veloura-Rugs/
 # ├── index.html              # Main HTML entry point
-# ├── package.json             # Project metadata & scripts
-# ├── vite.config.js           # Vite configuration
-# ├── data/
-# │   └── products.json        # Product catalog data
+# ├── package.json            # Project metadata & scripts
+# ├── vite.config.js          # Vite configuration
+# ├── requirements.txt        # This file — project requirements
 # ├── public/
-# │   └── images/              # Static assets (logo, favicons)
+# │   ├── data/
+# │   │   └── products.json   # Product catalog data (JSON)
+# │   └── images/             # Static assets (logo, favicons, poster)
 # └── src/
-#     ├── main.js              # App initialization & routing
-#     ├── router.js            # SPA hash-based router
-#     ├── store.js             # Cart, wishlist & state management
-#     ├── pages/               # Page renderers (home, collections, etc.)
+#     ├── main.js             # App initialization, routing & UI setup
+#     ├── router.js           # SPA hash-based router
+#     ├── store.js            # Cart, wishlist & state management
+#     ├── utils.js            # Utility functions (SVG rug generator)
+#     ├── pages/              # Page renderers
+#     │   ├── home.js         # Homepage (hero, collections, products)
+#     │   ├── collections.js  # Collections overview page
+#     │   ├── collectionDetail.js  # Filtered product listing
+#     │   ├── productDetail.js     # Single product page
+#     │   ├── about.js        # About us page
+#     │   ├── contact.js      # Contact page
+#     │   ├── login.js        # Login page
+#     │   ├── register.js     # Registration page
+#     │   ├── account.js      # User account & order history
+#     │   ├── wishlist.js     # Wishlist page
+#     │   ├── checkout.js     # Checkout flow & order confirmation
+#     │   ├── faq.js          # FAQ page
+#     │   └── policy.js       # Policy pages (shipping, returns, privacy)
 #     └── styles/
-#         └── index.css        # Global stylesheet
+#         └── index.css       # Global stylesheet (~4400 lines)
 
 # ─── Tech Stack ─────────────────────────────────────────
 # • Vanilla HTML, CSS, JavaScript (no frameworks)
 # • Vite for dev server & bundling
+# • gh-pages for GitHub Pages deployment
 # • SPA with hash-based routing
 # • Google Fonts (Cormorant Garamond, Jost)
 # • Font Awesome 6.4 (CDN)
